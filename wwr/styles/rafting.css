@@ -3,7 +3,6 @@
     --secondary-color: #62b6cb;
     --accent1-color: #5fa8d3;
     --accent2-color: #cae9ff;
-
     --heading-font: Arial, Helvetica, sans-serif;
     --body-font: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -18,15 +17,24 @@
 /* Body */
 body {
     font-family: var(--body-font);
-    color: var(--primary-color);
+    color: var(--accent1-color);
 }
 
-/* Page width control */
+/* Page width */
 header,
 main,
 footer {
     width: 840px;
     margin: 0 auto;
+}
+
+/* Header uses secondary color */
+header {
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
 }
 
 /* Headings */
@@ -45,17 +53,6 @@ article {
     padding: 8px;
 }
 
-/* Header */
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-header img {
-    width: 120px;
-}
-
 /* Navigation */
 nav ul {
     list-style: none;
@@ -69,7 +66,18 @@ nav a {
     font-weight: bold;
 }
 
-/* Hero section */
+/* Sections use accent2 color */
+section {
+    background-color: var(--accent2-color);
+    border-radius: 4px;
+}
+
+/* Social media links */
+.socialmedia a {
+    text-decoration: none;
+}
+
+/* Hero styling */
 .hero {
     position: relative;
 }
@@ -80,14 +88,14 @@ nav a {
     height: auto;
 }
 
-/* Hero title overlay */
+/* Hero title overlay uses accent1 */
 .hero h1 {
     position: absolute;
     top: 20px;
     width: 100%;
     padding: 16px;
     text-align: center;
-    opacity: 0.85;
+    opacity: 0.7;
     background-color: var(--accent1-color);
     color: #fff;
 }
@@ -107,21 +115,4 @@ nav a {
     width: 125px;
     margin: 8px;
     border: 2px solid var(--primary-color);
-}
-
-/* Footer */
-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* Social media links */
-.socialmedia a {
-    text-decoration: none;
-}
-
-.socialmedia img {
-    width: 30px;
-    margin: 0 5px;
 }
