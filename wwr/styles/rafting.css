@@ -1,12 +1,12 @@
 :root {
     --primary-color: #1b4965;
-    /* dark blue for headings & borders */
-    --secondary-color: #1b4965;
-    /* dark blue for header background */
-    --accent1-color: #62b6cb;
-    /* medium blue for hero overlay */
-    --accent2-color: #cae9ff;
-    /* light blue for sections */
+    /* dark blue for headings & body text */
+    --secondary-color: #0f2d44;
+    /* very dark blue for header */
+    --accent1-color: #005f99;
+    /* dark medium blue for hero overlay */
+    --accent2-color: #b0d4f1;
+    /* light blue for section background */
     --heading-font: Arial, Helvetica, sans-serif;
     --body-font: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -22,7 +22,7 @@
 body {
     font-family: var(--body-font);
     color: var(--primary-color);
-    /* dark text for contrast */
+    /* dark blue for readable text */
     background-color: #ffffff;
 }
 
@@ -37,7 +37,7 @@ footer {
 /* Header */
 header {
     background-color: var(--secondary-color);
-    /* dark blue */
+    /* dark enough for white text */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -58,13 +58,13 @@ nav ul {
 nav a {
     text-decoration: none;
     color: #ffffff;
-    /* white links for dark header */
+    /* white links on dark header, good contrast */
     font-weight: bold;
 }
 
 nav a:hover {
     color: var(--accent1-color);
-    /* lighter blue on hover */
+    /* hover contrast still readable */
 }
 
 /* Headings */
@@ -72,7 +72,7 @@ h1,
 h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
-    /* dark blue */
+    /* dark blue for good contrast */
 }
 
 /* Hero */
@@ -93,11 +93,12 @@ h2 {
     width: 100%;
     padding: 16px;
     text-align: center;
-    opacity: 0.85;
+    opacity: 0.95;
+    /* slightly higher opacity for better contrast */
     background-color: var(--accent1-color);
-    /* medium blue */
+    /* medium blue overlay */
     color: #ffffff;
-    /* white text, good contrast */
+    /* white text, now high contrast with darker overlay */
 }
 
 /* Hero article overlay */
@@ -105,8 +106,8 @@ h2 {
     position: absolute;
     bottom: 20px;
     left: 20px;
-    background-color: rgba(255, 255, 255, 0.95);
-    /* almost white for readability */
+    background-color: rgba(255, 255, 255, 0.98);
+    /* nearly white for max contrast */
     width: 70%;
     padding: 10px;
 }
@@ -120,7 +121,7 @@ h2 {
 
 .hero article p {
     color: var(--primary-color);
-    /* dark blue text */
+    /* dark text over almost white overlay */
 }
 
 /* Sections */
@@ -128,7 +129,7 @@ section {
     background-color: var(--accent2-color);
     /* light blue */
     color: var(--primary-color);
-    /* dark text for contrast */
+    /* dark text for readability */
     border-radius: 4px;
     padding: 16px;
     margin: 16px;
@@ -150,6 +151,7 @@ footer {
     background-color: var(--secondary-color);
     /* dark blue */
     color: #ffffff;
+    /* white text for contrast */
     padding: 12px;
 }
 
