@@ -1,8 +1,12 @@
 :root {
     --primary-color: #1b4965;
-    --secondary-color: #62b6cb;
-    --accent1-color: #5fa8d3;
+    /* dark blue for headings & borders */
+    --secondary-color: #1b4965;
+    /* dark blue for header background */
+    --accent1-color: #62b6cb;
+    /* medium blue for hero overlay */
     --accent2-color: #cae9ff;
+    /* light blue for sections */
     --heading-font: Arial, Helvetica, sans-serif;
     --body-font: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -17,7 +21,9 @@
 /* Body */
 body {
     font-family: var(--body-font);
-    color: var(--accent1-color);
+    color: var(--primary-color);
+    /* dark text for contrast */
+    background-color: #ffffff;
 }
 
 /* Page width */
@@ -28,29 +34,18 @@ footer {
     margin: 0 auto;
 }
 
-/* Header uses secondary color */
+/* Header */
 header {
     background-color: var(--secondary-color);
+    /* dark blue */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
 }
 
-/* Headings */
-h1,
-h2 {
-    font-family: var(--heading-font);
-    color: var(--primary-color);
-}
-
-/* Spacing */
-nav,
-p,
-section,
-article {
-    margin: 16px;
-    padding: 8px;
+header img {
+    width: 120px;
 }
 
 /* Navigation */
@@ -62,22 +57,25 @@ nav ul {
 
 nav a {
     text-decoration: none;
-    color: var(--primary-color);
+    color: #ffffff;
+    /* white links for dark header */
     font-weight: bold;
 }
 
-/* Sections use accent2 color */
-section {
-    background-color: var(--accent2-color);
-    border-radius: 4px;
+nav a:hover {
+    color: var(--accent1-color);
+    /* lighter blue on hover */
 }
 
-/* Social media links */
-.socialmedia a {
-    text-decoration: none;
+/* Headings */
+h1,
+h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    /* dark blue */
 }
 
-/* Hero styling */
+/* Hero */
 .hero {
     position: relative;
 }
@@ -88,16 +86,18 @@ section {
     height: auto;
 }
 
-/* Hero title overlay uses accent1 */
+/* Hero title overlay */
 .hero h1 {
     position: absolute;
     top: 20px;
     width: 100%;
     padding: 16px;
     text-align: center;
-    opacity: 0.7;
+    opacity: 0.85;
     background-color: var(--accent1-color);
-    color: #fff;
+    /* medium blue */
+    color: #ffffff;
+    /* white text, good contrast */
 }
 
 /* Hero article overlay */
@@ -105,14 +105,60 @@ section {
     position: absolute;
     bottom: 20px;
     left: 20px;
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(255, 255, 255, 0.95);
+    /* almost white for readability */
     width: 70%;
+    padding: 10px;
 }
 
-/* Article image */
 .hero article img {
     float: right;
     width: 125px;
     margin: 8px;
     border: 2px solid var(--primary-color);
+}
+
+.hero article p {
+    color: var(--primary-color);
+    /* dark blue text */
+}
+
+/* Sections */
+section {
+    background-color: var(--accent2-color);
+    /* light blue */
+    color: var(--primary-color);
+    /* dark text for contrast */
+    border-radius: 4px;
+    padding: 16px;
+    margin: 16px;
+}
+
+/* General spacing */
+nav,
+p,
+article {
+    margin: 16px;
+    padding: 8px;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary-color);
+    /* dark blue */
+    color: #ffffff;
+    padding: 12px;
+}
+
+/* Social media links */
+.socialmedia a {
+    text-decoration: none;
+}
+
+.socialmedia img {
+    width: 30px;
+    margin: 0 5px;
 }
