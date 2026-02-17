@@ -1,66 +1,107 @@
+/* PAGE WIDTH */
 header,
-.grid,
+main,
 footer {
     max-width: 840px;
     margin: 0 auto;
 }
 
-nav {
-    background-color: rgba(34, 19, 119, 0.842);
-    padding: 10px;
-    display: flex;
-    justify-content: space-evenly;
+/* ================= HEADER (GRID) ================= */
+.site-header {
+    display: grid;
+    grid-template-columns: 150px 1fr;
     align-items: center;
+    padding: 10px;
 }
 
-nav a {
+.logo {
+    width: 120px;
+}
+
+/* ================= NAV (FLEX) ================= */
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav a {
+    background-color: rgba(34, 19, 119, 0.842);
     color: white;
-    display: block;
     padding: 10px 20px;
     text-decoration: none;
 }
 
-nav a:hover {
+.main-nav a:hover {
     text-decoration: underline;
 }
 
+/* ================= HEADINGS ================= */
 h1 {
     color: darkblue;
     border-bottom: 2px solid darkblue;
 }
 
-main img {
-    width: 150px;
-    height: auto;
-    border: 1px solid black;
-    padding: 2px;
-    box-shadow: 0 0 10px gray;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    gap: 20px;
-}
-
-aside {
-    margin: 1em;
-    border: 1px solid rgb(0 0 0 / 0.2);
-    padding: 1em;
-    background-color: #eee;
-    color: #333;
+/* ================= HERO ================= */
+.hero {
+    position: relative;
     text-align: center;
-    grid-column: 1;
-    grid-row: 1;
 }
 
-aside img {
-    width: 200px;
+.hero img {
+    width: 100%;
     height: auto;
 }
 
-footer {
+/* ================= HISTORY (GRID) ================= */
+.history-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.history img {
+    width: 100%;
+    height: auto;
+}
+
+/* ================= ADVENTURES (FLEX) ================= */
+.adventure-gallery {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.adventure-gallery img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+figure {
+    margin: 0;
+    text-align: center;
+}
+
+/* ================= FOOTER (FLEX) ================= */
+.site-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-top: 1em;
     border-top: 1px solid black;
-    text-align: center;
+    padding: 10px 0;
+}
+
+.social {
+    display: flex;
+    gap: 10px;
+}
+
+.social img {
+    width: 30px;
 }
